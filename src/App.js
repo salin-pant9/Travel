@@ -18,7 +18,7 @@ function App() {
             <Search/>
           
           </Route>
-          <Route path='/'>
+          <Route path='/'exact>
             <Home />
           </Route>
         </Switch>

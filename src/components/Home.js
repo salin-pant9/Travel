@@ -1,7 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from "styled-components"
 import SearchIcon from '@material-ui/icons/Search';
+import { useHistory } from 'react-router';
 function Home() {
+    const history = useHistory();
+    const [input,setInput] = useState('');
+    const handleSearch = () => {
+        
+
+        history.push('/search');
+    }
     return (
         <HomeContainer>
             <Content>
@@ -16,9 +24,12 @@ function Home() {
                    <SearchContainer>
                         <SearchIcon/>
                         <form>
-                            <input type = "search" />
+                            <input type = "search" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Search for location"/>
+                            <button type="Submit" focus hidden onClick={handleSearch} >Search</button>
                         </form>
+                       
                     </SearchContainer> 
+                    <p>Trending:France,Switzerland</p>
                </Middle>
                 <Bgimg/>
                    
@@ -34,11 +45,13 @@ export default Home;
 
 const HomeContainer = styled.div`
    overflow: hidden;
+  
    height:100vh;
    display:flex;
+   width:100vw;
    flex-direction:column;
    text-align:center;
-
+   
 
 `;
 const Content = styled.div`
@@ -65,6 +78,7 @@ const Bgimg = styled.div`
     right:0;
     z-index:-1;
     opacity:0.65;
+   
 
 `;
 const  Title = styled.div`
@@ -80,8 +94,52 @@ const  Title = styled.div`
         color:white;
         font-weight:bold;
     }
+    > img {
+        height:31px;
+        width:52px;
+    }
     
 `;
-const Middle = styled.div``;
+const Middle = styled.div`
+    >h1 {
+        color:white;
+        font-size:30px;
+    }
+    > p {
+        color:white;
+        position:absolute;
+        
+        padding:5px;
+        
+    }
 
-const SearchContainer = styled.div``;
+`;
+
+const SearchContainer = styled.div`
+    display:flex;
+    padding:10px;
+    justify-content:center;
+    align-items:center;
+    border:1px solid white;
+    background-color:white;
+    margin-top:15px;
+    margin-bottom:5px;
+
+    > .MuiSvgIcon-root{
+        color:grey;
+        font-size:20px;
+        margin-right:5px;
+    } 
+    >form {
+        display:flex;
+        flex:1;
+       > input {
+           flex:1;
+           border-style:none;
+           outline:none;
+           font-weight:15px;
+       }
+    
+        
+    }
+`;
