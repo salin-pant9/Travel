@@ -1,12 +1,16 @@
-import logo from './logo.svg';
+import styled from "styled-components";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <Container>
+
+    </Container>
+      
+    
   );
 }
 
 export default App;
+
+const Container = styled.div``;
