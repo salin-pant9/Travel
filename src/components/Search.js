@@ -19,14 +19,25 @@ function Search() {
             </Header>
             <Body>
                 
-                    <BodyLeft>
-                        <BgImg/>
-                    </BodyLeft>
-                    <BodyRight>
-                        <Wrap>
-                            <Image/>
-                        </Wrap>
-                    </BodyRight>
+                   
+                <BgImg>
+                    <img src="images/image 1.png" alt="" />
+                </BgImg>
+                    
+                    
+                <Wrap>
+                    <Image onclick source="images/Frame 5.png"/>
+                    <Image source="images/Frame 6.png"/>
+                    <Image source="images/Frame 7.png"/>
+                    <Image source="images/Frame 8.png"/>
+                    <Image source="images/Frame 8.png"/>
+                    <Image source="images/Frame 10.png"/>
+                    <Image source="images/Frame 11.png"/>
+                    <Image source="images/Frame 12.png"/>
+                    <Image source="images/Frame 13.png"/>
+
+                </Wrap>
+                    
                 
             </Body>
         </SearchContainer>
@@ -39,14 +50,10 @@ const SearchContainer = styled.div`
     background-color:white;
     width:100vw;
     height:100vh;
-    position:relative;
+    /* position:relative; */
     overflow-x:hidden;
-    display:flex;
-    flex-direction:column;
-    @media (max-width: 681px) {
-           
-          flex-direction:column;
-       }  
+   
+   
    
 `;
 const Header = styled.div`
@@ -125,30 +132,47 @@ const HeaderMiddle = styled.div`
    
     
 `;
+
+    
 const Body = styled.div`
-    position:relative;
-    height:100vh;
-    width:100%;
-`;
-
-const BodyLeft = styled.div`
-  
-
-`;
-const BgImg = styled.div`
-    background-image: url('/images/image 1.png');
-    position: absolute;
-    width:100%;
-    height:100%;
+    display:flex;
    
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat:no-repeat;
-    background-size:cover;
-    overflow: scroll;
+    /* flex-wrap:nowrap; */
+    align-items:center;
+    
+    width:100vw;
+    height:100vh;
+`;
+
+
+
+const BgImg = styled.div`
+    
+  display:flex;
+  flex:0.5;
+  flex-wrap:nowrap;
+  width:100%;
+  max-width:80vw;
+  height:100vh;
+  > img {
+      object-fit:cover;
+      width:600px !important;
+      height:auto!important;
+     
+  }
+
+    
+    
 
 
 `;
-const BodyRight = styled.div``;
 
-const Wrap = styled.div``;
+
+const Wrap = styled.div`
+     display:grid;
+     width:100vw;
+     height:100vh;
+     grid-template-columns:repeat(3,minmax(0,1fr)) ;
+     grid-gap:20px;
+     margin-top:20px;
+`;
