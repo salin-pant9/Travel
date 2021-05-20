@@ -11,7 +11,9 @@ function Search() {
                 </Headerleft>
                 <HeaderMiddle>
                     < SearchIcon />
+
                     <input type = "search" placeholder="Thailand" />
+                    <button type="submit" hidden>Search</button>
                 </HeaderMiddle>
             </Header>
         </SearchContainer>
@@ -26,11 +28,12 @@ const SearchContainer = styled.div`
     height:100vh;
     position:relative;
     overflow-x:hidden;
+    display:flex;
    
 `;
 const Header = styled.div`
    position: absolute;
-    width: 1619px;
+    width: 100vw;
     height: 100px;
     left: 0px;
     top: 0px;
@@ -62,21 +65,25 @@ const Headerleft = styled.div`
 `;
 
 const HeaderMiddle = styled.div`
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background-color:white;
-    border-radius:4px;
-    border:1px solid #D2DDE4;
-    width:563px;
-    height:56px;
-    box-sizing: border-box;
-    margin-left:50px;
-    >input {
+   display:flex;
+   align-items:center;
+   flex:0.3;
+   border:1px solid #0F4C5C;
+   border-radius:4px;
+   outline:none;
+   width:100vw;
+    justify-content:flex-end;
+    box-sizing:border-box;
+    > input {
         flex: 1;
-        padding:10px;
         border-style:none;
         outline:none;
+        padding:10px;
+        font-size:15px;
+        
     }
-    
+    >.MuiSvgIcon-root {
+        font-size:20px;
+        color: #687885;
+    }
 `;
