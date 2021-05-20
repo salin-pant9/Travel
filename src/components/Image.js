@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-function Image({source,onclick}) {
+function Image({source}) {
     return (
-        <Container onclick={onclick}>
+        <Container>
             <img src={source} alt="" />
         </Container>
     )
@@ -11,8 +11,7 @@ function Image({source,onclick}) {
 export default Image;
 
 const Container = styled.div`
-    cursor:${props => 'pointer'};
-    margin-right:10px;
+margin-right:10px;
     >img {
         width:100%;
         height:100%;

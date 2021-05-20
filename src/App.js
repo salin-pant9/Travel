@@ -8,12 +8,16 @@ import {
   Link
 } from "react-router-dom";
 import Search from "./components/Search";
+import Detail from "./components/Detail";
 
 function App() {
   return (
     <Container>
       <Router>
         <Switch>
+          <Route path = '/search/1' exact>
+            <Detail />
+          </Route>
           <Route path = '/search'>
             <Search/>
           

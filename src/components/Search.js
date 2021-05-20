@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 import Image from './Image';
+import { Link } from 'react-router-dom';
 function Search() {
     return (
         <SearchContainer>
@@ -26,7 +27,10 @@ function Search() {
                     
                     
                 <Wrap>
-                    <Image onclick source="images/Frame 5.png"/>
+                    <Link to="/search/1">
+                        <Image  source="images/Frame 5.png"/>
+                    </Link>
+                    
                     <Image source="images/Frame 6.png"/>
                     <Image source="images/Frame 7.png"/>
                     <Image source="images/Frame 8.png"/>
@@ -142,6 +146,9 @@ const Body = styled.div`
     
     width:100vw;
     height:100vh;
+    @media(max-width:798px){
+        flex-direction:column;
+    }
 `;
 
 
@@ -160,6 +167,11 @@ const BgImg = styled.div`
       height:auto!important;
      
   }
+  @media(max-width:798px){
+      justify-content:flex-start;
+      margin-left:-90px;
+  }
+
 
     
     
@@ -175,4 +187,7 @@ const Wrap = styled.div`
      grid-template-columns:repeat(3,minmax(0,1fr)) ;
      grid-gap:20px;
      margin-top:20px;
+     @media(max-width:968px){
+         grid-template-columns:repeat(2,minmax(0,1fr));
+     }
 `;
