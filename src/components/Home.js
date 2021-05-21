@@ -45,12 +45,14 @@ export default Home;
 
 const HomeContainer = styled.div`
    overflow: hidden;
-  
+   color:transparent;
    height:100vh;
    display:flex;
    width:100vw;
    flex-direction:column;
    text-align:center;
+  background-color: rgba(0,0,0,0.5);
+   
    
 
 `;
@@ -77,7 +79,7 @@ const Bgimg = styled.div`
     left:0;
     right:0;
     z-index:-1;
-    opacity:0.65;
+    opacity:0.85;
    
 
 `;
