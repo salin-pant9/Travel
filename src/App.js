@@ -5,7 +5,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+ 
 } from "react-router-dom";
 import Search from "./components/Search";
 import Detail from "./components/Detail";
