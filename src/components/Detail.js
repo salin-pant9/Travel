@@ -184,7 +184,7 @@ const BgImg = styled.div`
        width:100%;
        height:100%;
        @media(min-width:968px){
-           margin-top:-5rem;
+           margin-top:5rem;
            height: 388px;
        }
    }
