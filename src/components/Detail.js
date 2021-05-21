@@ -177,6 +177,7 @@ const Bodybody = styled.div`
 const BgImg = styled.div`
     margin-top:12px;
     max-width:90vw;
+    margin-top:-8rem;
     
    > img {
        object-fit:cover;
