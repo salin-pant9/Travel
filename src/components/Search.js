@@ -64,7 +64,7 @@ const Header = styled.div`
    position: sticky;
     z-index:100;
     width: 100%;
-    height: 100px;
+    height: 90px;
     left: 0px;
     top: 0px;
     margin-top:-20px;
@@ -143,9 +143,9 @@ const Body = styled.div`
    
     /* flex-wrap:nowrap; */
     align-items:center;
-    
+    margin-top:60px;
     width:100vw;
-    height:100vh;
+    height:90vh;
     @media(max-width:798px){
         flex-direction:column;
     }
